@@ -1,0 +1,799 @@
+{
+  "genesis_time": "2024-03-05T21:00:00Z",
+  "chain_id": "testnetv1_42238-42238",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "40000000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    },
+    "version": {
+      "app": "0"
+    }
+  },
+  "app_hash": "",
+  "app_state": {
+    "06-solomachine": null,
+    "07-tendermint": null,
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "gala1nt0xhke5uwm5ql26e3eq0fyvyg2e3xlh6tyzgq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "gala149y4futjkcvwq0nxrx8efuwvxk7qgt4vgz58mz",
+          "pub_key": null,
+          "account_number": "1",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "gala1q52d6dmwv5pznamy6z66vq3v2cagkkgrtmqh5z",
+          "pub_key": null,
+          "account_number": "2",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "gala1lz5ccg5md8n9s3jwz6eak4tusm9h945cqx0r7f",
+          "pub_key": null,
+          "account_number": "3",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "gala1u8kj3as93rhdnrvkudqfzq4stklhds6q57a42w",
+          "pub_key": null,
+          "account_number": "4",
+          "sequence": "0"
+        }
+      ]
+    },
+    "authz": {
+      "authorization": []
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "gala1q52d6dmwv5pznamy6z66vq3v2cagkkgrtmqh5z",
+          "coins": [
+            {
+              "denom": "agnet",
+              "amount": "10000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "gala1nt0xhke5uwm5ql26e3eq0fyvyg2e3xlh6tyzgq",
+          "coins": [
+            {
+              "denom": "agnet",
+              "amount": "10000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "gala149y4futjkcvwq0nxrx8efuwvxk7qgt4vgz58mz",
+          "coins": [
+            {
+              "denom": "agnet",
+              "amount": "10000000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "gala1u8kj3as93rhdnrvkudqfzq4stklhds6q57a42w",
+          "coins": [
+            {
+              "denom": "agnet",
+              "amount": "999969999000000000000000000"
+            }
+          ]
+        },
+        {
+          "address": "gala1lz5ccg5md8n9s3jwz6eak4tusm9h945cqx0r7f",
+          "coins": [
+            {
+              "denom": "agnet",
+              "amount": "1000000000000000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "agnet",
+          "amount": "1000000000000000000000000000"
+        }
+      ],
+      "denom_metadata": [
+        {
+          "description": "The native staking token of the Galactica Network.",
+          "denom_units": [
+            {
+              "denom": "agnet",
+              "exponent": 0,
+              "aliases": [
+                "attognet"
+              ]
+            },
+            {
+              "denom": "ugnet",
+              "exponent": 6,
+              "aliases": [
+                "micrognet"
+              ]
+            },
+            {
+              "denom": "gnet",
+              "exponent": 18,
+              "aliases": []
+            }
+          ],
+          "base": "agnet",
+          "display": "gnet",
+          "name": "Galactica Network",
+          "symbol": "GNET",
+          "uri": "",
+          "uri_hash": ""
+        }
+      ],
+      "send_enabled": [
+        {
+          "denom": "agnet",
+          "enabled": true
+        }
+      ]
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "consensus": null,
+    "crisis": {
+      "constant_fee": {
+        "denom": "agnet",
+        "amount": "1000"
+      }
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.020000000000000000",
+        "base_proposer_reward": "0.000000000000000000",
+        "bonus_proposer_reward": "0.000000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "epochs": {
+      "params": {},
+      "epochs": [
+        {
+          "identifier": "week",
+          "start_time": "0001-01-01T00:00:00Z",
+          "duration": "604800s",
+          "current_epoch": "0",
+          "current_epoch_start_time": "0001-01-01T00:00:00Z",
+          "epoch_counting_started": false,
+          "current_epoch_start_height": "0"
+        },
+        {
+          "identifier": "day",
+          "start_time": "0001-01-01T00:00:00Z",
+          "duration": "86400s",
+          "current_epoch": "0",
+          "current_epoch_start_time": "0001-01-01T00:00:00Z",
+          "epoch_counting_started": false,
+          "current_epoch_start_height": "0"
+        }
+      ]
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "evm": {
+      "accounts": [],
+      "params": {
+        "evm_denom": "agnet",
+        "enable_create": true,
+        "enable_call": true,
+        "extra_eips": [],
+        "chain_config": {
+          "homestead_block": "0",
+          "dao_fork_block": "0",
+          "dao_fork_support": true,
+          "eip150_block": "0",
+          "eip150_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "eip155_block": "0",
+          "eip158_block": "0",
+          "byzantium_block": "0",
+          "constantinople_block": "0",
+          "petersburg_block": "0",
+          "istanbul_block": "0",
+          "muir_glacier_block": "0",
+          "berlin_block": "0",
+          "london_block": "0",
+          "arrow_glacier_block": "0",
+          "gray_glacier_block": "0",
+          "merge_netsplit_block": "0",
+          "shanghai_block": "0",
+          "cancun_block": "0"
+        },
+        "allow_unprotected_txs": false
+      }
+    },
+    "feegrant": {
+      "allowances": []
+    },
+    "feemarket": {
+      "params": {
+        "no_base_fee": false,
+        "base_fee_change_denominator": 8,
+        "elasticity_multiplier": 2,
+        "enable_height": "0",
+        "base_fee": "1000000000",
+        "min_gas_price": "0.000000000000000000",
+        "min_gas_multiplier": "0.500000000000000000"
+      },
+      "block_gas": "0"
+    },
+    "genutil": {
+      "gen_txs": [
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "node03",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "gala1q52d6dmwv5pznamy6z66vq3v2cagkkgrtmqh5z",
+                "validator_address": "galavaloper1q52d6dmwv5pznamy6z66vq3v2cagkkgrxjm3ct",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "ZJn1tmvdme5mayi76biusyU3Y4jtyWE4eMVIw+lOe8g="
+                },
+                "value": {
+                  "denom": "agnet",
+                  "amount": "9000000000000000000000"
+                }
+              }
+            ],
+            "memo": "1772db93debd931646eb4faa7f3273cb64cf6a72@10.55.0.4:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+                  "key": "AzC+6zt8IsOu1qU+u3QXQlDrEsB0XzGbfa1YgVeUBaPK"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "zgFyBOQwWvmsiloM0wD6BuUxswaHG2rjSKN0Ur287xQ9mlzlqFpHTyCRcqaLF60KoP8wdNvMaFfA8dd1yaKm4AA="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "node01",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "gala1nt0xhke5uwm5ql26e3eq0fyvyg2e3xlh6tyzgq",
+                "validator_address": "galavaloper1nt0xhke5uwm5ql26e3eq0fyvyg2e3xlhhzlyyf",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "nndKXK6/HKnCjKgJCuJ/+aJiUv54GgbujFFDHvxRAoQ="
+                },
+                "value": {
+                  "denom": "agnet",
+                  "amount": "9000000000000000000000"
+                }
+              }
+            ],
+            "memo": "95ed482e2884c99724ad6d698d8169b2cf9223ff@10.55.0.2:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+                  "key": "AqYkbQHomml1/eUDWGQDQK1az1VL4dgQYUIRnaAqp6O7"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "DQpmDxwPzgFxO2+HghbnvXOdY3BAAFZIQqWN5Pv70rxOvfVhvWyyZmEUggwLw20o6ckTedcI2N4dbo9PZLcY6wE="
+          ]
+        },
+        {
+          "body": {
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "description": {
+                  "moniker": "node02",
+                  "identity": "",
+                  "website": "",
+                  "security_contact": "",
+                  "details": ""
+                },
+                "commission": {
+                  "rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "max_change_rate": "0.010000000000000000"
+                },
+                "min_self_delegation": "1",
+                "delegator_address": "gala149y4futjkcvwq0nxrx8efuwvxk7qgt4vgz58mz",
+                "validator_address": "galavaloper149y4futjkcvwq0nxrx8efuwvxk7qgt4v9t0pht",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "4y0pKzCfFQfhQcIBlU8j4D5HCqFMl5sMTVKG67MR0RA="
+                },
+                "value": {
+                  "denom": "agnet",
+                  "amount": "9000000000000000000000"
+                }
+              }
+            ],
+            "memo": "b27cd7df09bbd8b2138e5255307623102c0e86ba@10.55.0.3:26656",
+            "timeout_height": "0",
+            "extension_options": [],
+            "non_critical_extension_options": []
+          },
+          "auth_info": {
+            "signer_infos": [
+              {
+                "public_key": {
+                  "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+                  "key": "A4ktV8zZtgAwJIDPKBvOgKp/bFLKyA5xC8414bBJ8St9"
+                },
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "sequence": "0"
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "payer": "",
+              "granter": ""
+            },
+            "tip": null
+          },
+          "signatures": [
+            "3Vu2vCViPLiATkhghrSRW0XR/GSNBpKxTrdLOQMxYC1BAuWZ2DWGi03xEMUbg9yiLp6+ZcAwCvNqw91QnxMRyQE="
+          ]
+        }
+      ]
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "agnet"
+          }
+        ]
+      },
+      "voting_params": {
+        "voting_period": "600s"
+      },
+      "tally_params": null,
+      "params": {
+        "min_deposit": [
+          {
+            "denom": "agnet",
+            "amount": "100000000000000000000"
+          }
+        ],
+        "max_deposit_period": "600s",
+        "voting_period": "600s",
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto_threshold": "0.334000000000000000",
+        "min_initial_deposit_ratio": "0.000000000000000000",
+        "burn_vote_quorum": false,
+        "burn_proposal_deposit_prevote": false,
+        "burn_vote_veto": true
+      }
+    },
+    "group": {
+      "group_seq": "0",
+      "groups": [],
+      "group_members": [],
+      "group_policy_seq": "0",
+      "group_policies": [],
+      "proposal_seq": "0",
+      "proposals": [],
+      "votes": []
+    },
+    "ibc": {
+      "client_genesis": {
+        "clients": [],
+        "clients_consensus": [],
+        "clients_metadata": [],
+        "params": {
+          "allowed_clients": [
+            "06-solomachine",
+            "07-tendermint",
+            "09-localhost"
+          ]
+        },
+        "create_localhost": false,
+        "next_client_sequence": "0"
+      },
+      "connection_genesis": {
+        "connections": [],
+        "client_connection_paths": [],
+        "next_connection_sequence": "0",
+        "params": {
+          "max_expected_time_per_block": "30000000000"
+        }
+      },
+      "channel_genesis": {
+        "channels": [],
+        "acknowledgements": [],
+        "commitments": [],
+        "receipts": [],
+        "send_sequences": [],
+        "recv_sequences": [],
+        "ack_sequences": [],
+        "next_channel_sequence": "0"
+      }
+    },
+    "inflation": {
+      "params": {
+        "mint_denom": "agnet",
+        "inflation_distribution": {
+          "validators_share": "0.99933",
+          "other_shares": [
+            {
+              "address": "gala1lz5ccg5md8n9s3jwz6eak4tusm9h945cqx0r7f",
+              "name": "faucet",
+              "share": "0.0067"
+            }
+          ]
+        },
+        "enable_inflation": true
+      },
+      "period": "0",
+      "epoch_identifier": "day",
+      "epochs_per_period": "365",
+      "skipped_epochs": "0",
+      "period_mint_provisions": [
+        {
+          "denom": "agnet",
+          "amount": "5484028890000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "4482246743000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "3663462806000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "2994248309000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "2447281004000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "2000229672000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "1634842397000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "1336201387000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "1092113925000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "892614569000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "729558291000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "596287937000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "487362433000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "398334641000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "325569792000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "266097092000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "217488428000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "177759239000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "145287486000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "118747434000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "97055524000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "79326134000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "64835418000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "52991759000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "43311614000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "35399766000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "28933197000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "23647893000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "19328069000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "15797359000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "12911614000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "10553015000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "8625268000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "7049667000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "5761886000000000000000000.000000000000000000"
+        },
+        {
+          "denom": "agnet",
+          "amount": "4709347000000000000000000.000000000000000000"
+        }
+      ],
+      "inflation_distribution": {
+        "validators_share": "0.99933",
+        "other_shares": [
+          {
+            "address": "gala1lz5ccg5md8n9s3jwz6eak4tusm9h945cqx0r7f",
+            "name": "faucet",
+            "share": "0.0067"
+          }
+        ]
+      }
+    },
+    "interchainaccounts": {
+      "controller_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "ports": [],
+        "params": {
+          "controller_enabled": true
+        }
+      },
+      "host_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "port": "icahost",
+        "params": {
+          "host_enabled": true,
+          "allow_messages": [
+            "*"
+          ]
+        }
+      }
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "agnet",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "params": null,
+    "reputation": {
+      "params": {}
+    },
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "30s",
+        "max_validators": 100,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "agnet",
+        "min_commission_rate": "0.000000000000000000"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "transfer": {
+      "port_id": "transfer",
+      "denom_traces": [],
+      "params": {
+        "send_enabled": true,
+        "receive_enabled": true
+      },
+      "total_escrowed": []
+    },
+    "upgrade": {},
+    "vesting": {}
+  }
+}
