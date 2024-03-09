@@ -1,5 +1,5 @@
 # Galactica network
 
-## testnetv1
+## galactica-testnet-1
 
-- [genesis.json](network/testnet/testnetv1/genesis.json)
+- [genesis.json](network/testnet/galactica-testnet-1/genesis.json)
