@@ -15,13 +15,13 @@
 proxy_app = "tcp://127.0.0.1:26658"
 
 # A custom human readable name for this node
-moniker = "validator"
+moniker = "localtestnet"
 
 # If this node is many blocks behind the tip of the chain, BlockSync
 # allows them to catchup quickly by downloading blocks in parallel
 # and verifying their commits
 #
-# Deprecated: this key will be removed and BlockSync will be enabled
+# Deprecated: this key will be removed and BlockSync will be enabled 
 # unconditionally in the next major release.
 block_sync = true
 
@@ -213,7 +213,7 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-persistent_peers = "34c490af18e7c5dded1e6c0fc468e3859c360be9@192.168.20.4:26656,cf50df7010123d04f3c511df3d331fdc5fa4d645@192.168.20.2:26656,e9cfd5b390e44b5106ef25b6e23a88ad251f5838@192.168.20.3:26656"
+persistent_peers = "502db66eef1cc4315c0b8bc5d3cc37d787b77ac8@192.168.20.2:26656,831828094d95220cde7cff1acf19cf7e6b55d554@192.168.20.3:26656,ebea02e6c345130122392a9b1bc5896e15ddcb22@192.168.20.4:26656"
 
 # Path to address book
 addr_book_file = "config/addrbook.json"
@@ -362,7 +362,7 @@ chunk_fetchers = "4"
 [blocksync]
 
 # Block Sync version to use:
-#
+# 
 # In v0.37, v1 and v2 of the block sync protocols were deprecated.
 # Please use v0 instead.
 #
