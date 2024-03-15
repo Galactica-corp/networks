@@ -21,7 +21,7 @@ moniker = "validator"
 # allows them to catchup quickly by downloading blocks in parallel
 # and verifying their commits
 #
-# Deprecated: this key will be removed and BlockSync will be enabled
+# Deprecated: this key will be removed and BlockSync will be enabled 
 # unconditionally in the next major release.
 block_sync = true
 
@@ -213,7 +213,7 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-persistent_peers = "34c490af18e7c5dded1e6c0fc468e3859c360be9@192.168.20.4:26656,cf50df7010123d04f3c511df3d331fdc5fa4d645@192.168.20.2:26656,e9cfd5b390e44b5106ef25b6e23a88ad251f5838@192.168.20.3:26656"
+persistent_peers = "0cf7a099614b24e619423263a2fb7b91eb4505cd@192.168.20.3:26656,0e6d892a014f5f32c65a957b06b1f00e5daa5a36@192.168.20.2:26656,9472c75233b555ed3b0dabe2b21cf68edd1618d3@192.168.20.4:26656"
 
 # Path to address book
 addr_book_file = "config/addrbook.json"
@@ -362,7 +362,7 @@ chunk_fetchers = "4"
 [blocksync]
 
 # Block Sync version to use:
-#
+# 
 # In v0.37, v1 and v2 of the block sync protocols were deprecated.
 # Please use v0 instead.
 #
