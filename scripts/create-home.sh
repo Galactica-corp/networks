@@ -54,6 +54,5 @@ cp -r "$NETWORK_PATH"/genesis.json "$GALACTICA_HOME/config/genesis.json"
 cp -r "$NETWORK_PATH"/gentx "$GALACTICA_HOME/config/gentx"
 
 sed -i '' 's/moniker = "validator"/moniker = "'$moniker'"/g'  "$GALACTICA_HOME/config/config.toml"
-sed -i '' 's/moniker = "localtestnet"/moniker = "'$moniker'"/g'  "$GALACTICA_HOME/config/config.toml"
 
 echo -e "\e[32mGalactica Network\e[0m node home path: $GALACTICA_HOME"

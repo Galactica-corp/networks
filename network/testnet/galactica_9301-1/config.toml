@@ -15,7 +15,7 @@
 proxy_app = "tcp://127.0.0.1:26658"
 
 # A custom human readable name for this node
-moniker = "localtestnet"
+moniker = "validator"
 
 # If this node is many blocks behind the tip of the chain, BlockSync
 # allows them to catchup quickly by downloading blocks in parallel
@@ -213,7 +213,7 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-persistent_peers = "502db66eef1cc4315c0b8bc5d3cc37d787b77ac8@192.168.20.2:26656,831828094d95220cde7cff1acf19cf7e6b55d554@192.168.20.3:26656,ebea02e6c345130122392a9b1bc5896e15ddcb22@192.168.20.4:26656"
+persistent_peers = "0cf7a099614b24e619423263a2fb7b91eb4505cd@192.168.20.3:26656,0e6d892a014f5f32c65a957b06b1f00e5daa5a36@192.168.20.2:26656,9472c75233b555ed3b0dabe2b21cf68edd1618d3@192.168.20.4:26656"
 
 # Path to address book
 addr_book_file = "config/addrbook.json"
