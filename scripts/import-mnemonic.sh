@@ -18,21 +18,16 @@ echo "Key name: $key_name"
 
 if is_gala_key_exists $key_name; then
   echo "Key $key_name already exists, showing key"
-  gala_keys_show $key_name
+  gala_keys_nopwd show $key_name
 else
   echo "Importing mnemonic for key $key_name"
-  # please enter mnemonic phrase:
-  if [ -z "$MNEMONIC" ]; then
-    read -p "Enter mnemonic: " MNEMONIC
-  fi
 
-  echo "MNEMONIC: ${MNEMONIC}"
-
-  echo $MNEMONIC | gala keys add \
+  gala keys add \
       $key_name \
       --recover \
       --keyring-backend $KEYRING_BACKEND \
       --algo "eth_secp256k1" \
-      --keyring-dir $GALACTICA_HOME
+      --keyring-dir $GALACTICA_HOME \
+      --home $GALACTICA_HOME
 fi
 
