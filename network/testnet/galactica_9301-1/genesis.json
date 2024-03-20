@@ -126,12 +126,6 @@
           ]
         }
       ],
-      "supply": [
-        {
-          "denom": "agnet",
-          "amount": "1000000000000000000000000000"
-        }
-      ],
       "denom_metadata": [
         {
           "description": "The native staking token of the Galactica Network.",
