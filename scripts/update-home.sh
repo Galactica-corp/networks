@@ -36,6 +36,11 @@ cp -r "$NETWORK_PATH"/genesis.json "$GALACTICA_HOME/config/genesis.json"
 rm -rf $GALACTICA_HOME/config/gentx/*
 cp -r "$NETWORK_PATH"/gentx/* "$GALACTICA_HOME/config/gentx/"
 
-sed -i '' 's/moniker = "validator"/moniker = "'$moniker'"/g'  "$GALACTICA_HOME/config/config.toml"
+if [[ "$(uname)" == "Darwin" ]]; then
+    sed -i '' 's/moniker = "validator"/moniker = "'$moniker'"/g'  "$GALACTICA_HOME/config/config.toml"
+else
+    sed -i 's/moniker = "validator"/moniker = "'$moniker'"/g'  "$GALACTICA_HOME/config/config.toml"
+fi
+
 
 echo -e "Successfully updated \e[32mGalactica Network\e[0m node home path: $GALACTICA_HOME"
