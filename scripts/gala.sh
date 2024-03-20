@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 GALACTICA_HOME="~/.galactica"
 GALACTICA_HOME=$(eval echo $GALACTICA_HOME)
 NETWORK_PATH=${NETWORK_PATH:-"./network/testnet/galactica_9301-1"}
@@ -12,8 +11,19 @@ function gala() {
 }
 
 
-function gala_keys {
+function gala_keys_nopwd {
   gala keys "$@" --keyring-dir $GALACTICA_HOME --keyring-backend $KEYRING_BACKEND
+}
+
+function gala_keys {
+  # check .password file. If it exists, use it content and pass it to gala command
+  local password_file=".password"
+  if [ -f "$password_file" ]; then
+    local password=$(cat "$password_file")
+    echo $password | gala keys "$@" --keyring-dir $GALACTICA_HOME --keyring-backend $KEYRING_BACKEND
+  else
+    gala_keys_nopwd "$@"
+  fi
 }
 
 function is_gala_key_exists {
@@ -41,6 +51,15 @@ function moniker_from_keys() {
   gala_keys list --list-names | head -n 1
 }
 
+function read_input {
+  local prompt=$1
+  local default_value=$2
+  read -p "$prompt (default $default_value): " input
+  echo ${input:-$default_value}
+}
+
+echo -e "============================================="
+echo -e "Gala CLI version: $(gala version)"
 echo -e "============================================="
 echo -e "GALACTICA_HOME: $GALACTICA_HOME"
 echo -e "NETWORK_PATH: $NETWORK_PATH"
