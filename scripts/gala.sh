@@ -44,6 +44,9 @@ function moniker_from_config() {
     moniker=$(grep 'moniker' "$config_path" | awk -F '"' '{print $2}')
     echo $moniker
   fi
+
+  # if moniker is not found in config, return empty string
+  echo ""
 }
 
 function moniker_from_keys() {
@@ -58,8 +61,8 @@ function read_input {
   echo ${input:-$default_value}
 }
 
-echo -e "============================================="
-echo -e "Gala CLI version: $(gala version)"
+#echo -e "============================================="
+#echo -e "Gala CLI version: $(gala version)"
 echo -e "============================================="
 echo -e "GALACTICA_HOME: $GALACTICA_HOME"
 echo -e "NETWORK_PATH: $NETWORK_PATH"

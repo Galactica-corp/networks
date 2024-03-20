@@ -57,7 +57,6 @@ fi
 p2p_port=${p2p_port:-"26656"}
 echo "P2P port: $p2p_port"
 
-
 commission_rate=0.1
 commission_max_rate=0.2
 commission_max_change_rate=0.01
