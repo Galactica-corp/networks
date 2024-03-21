@@ -34,7 +34,8 @@ The scripts in the `scripts` directory simplify the setup and management of your
 
 ```sh
 export GALACTICA_HOME=~/.galactica
-export NETWORK_PATH=./network/testnet/galactica_9301-1
+export CHAIN_ID=galactica_9301-1
+export NETWORK_PATH=./network/testnet/$CHAIN_ID
 export KEYRING_BACKEND=file
 ```
 
@@ -82,3 +83,207 @@ export KEYRING_BACKEND=file
 
 After generating your gentx, submit it as public pull request to the [Galactica networks repository](https://github.com/Galactica-corp/networks). Ensure all information is accurate before proceeding.
 
+
+
+
+## Alternative way to use the `galacticad` command-line tool
+
+The `galacticad` command-line tool can be called directly without using the scripts. 
+
+### Prerequisites
+
+Please ensure the following environment variables are set:
+```bash
+export MONIKER="my-node"
+export GALACTICA_HOME=~/.galactica
+export CHAIN_ID=galactica_9301-1
+export NETWORK_PATH=./network/testnet/$CHAIN_ID
+export KEYRING_BACKEND=file
+```
+
+### Key Management
+
+Galactica uses the `keyring` to manage keys. The `keyring` is a secure storage for keys and supports various backends such as `os`, `file`, `test`, `kwallet`, `pass`, etc. To read more about keyring backends, visit [Evmos documentation](https://docs.evmos.org/protocol/concepts/keyring#keyring-backends).
+
+You can use the `galacticad keys` command to manage keys. Here are some examples:
+
+#### Create a new key
+
+Generate a new private key for node security and transactions. 
+
+```bash
+galacticad keys add $MONIKER \
+  --home $GALACTICA_HOME \
+  --keyring-dir $GALACTICA_HOME \
+  --keyring-backend $KEYRING_BACKEND \
+  --algo eth_secp256k1
+```
+
+On this step, you will be prompted to enter a passphrase to encrypt the key. Write down the mnemonic phrase and keep it safe. It is the only way to recover your key.
+
+#### Show the key
+
+Address and public key can be displayed using the following command:
+
+```bash
+galacticad keys show $MONIKER \
+  --home $GALACTICA_HOME \
+  --keyring-dir $GALACTICA_HOME \
+  --keyring-backend $KEYRING_BACKEND
+```
+
+#### Import a mnemonic phrase
+
+Import a mnemonic phrase into the keyring. You can add --recover flag to recover the key from the mnemonic phrase.
+
+```bash 
+galacticad keys add $MONIKER \
+  --home $GALACTICA_HOME \
+  --keyring-dir $GALACTICA_HOME \
+  --keyring-backend $KEYRING_BACKEND \
+  --recover
+```
+
+### Home Directory Management
+
+#### Prerequisites
+
+For the following commands, ensure the following environment variables are set:
+
+```bash
+export CHAIN_ID=galactica_9301-1
+export NETWORK_PATH=./network/testnet/$CHAIN_ID
+export BASE_DENOM=agnet
+```
+
+#### Initialize the home directory
+
+Initialize the node's home directory with necessary configuration files.
+
+```bash
+galacticad init $MONIKER --recover \
+  --home "$GALACTICA_HOME" \
+  --chain-id $CHAIN_ID \
+  --default-denom $BASE_DENOM \
+  --keyring-backend $KEYRING_BACKEND
+```
+
+#### Copy the network configuration files
+
+Copy the network configuration files to the home directory.
+
+```bash
+# copy NETWORK_PATH to GALACTICA_HOME
+cp -r "$NETWORK_PATH"/{app.toml,client.toml,config.toml,genesis.json,gentx} "$GALACTICA_HOME/config/"
+
+OS=$(uname)
+if [[ "$OS" == "Darwin" ]]; then
+    sed -i '' 's/moniker = "validator"/moniker = "'$MONIKER'"/g'  "$GALACTICA_HOME/config/config.toml"
+else
+    sed -i 's/moniker = "validator"/moniker = "'$MONIKER'"/g'  "$GALACTICA_HOME/config/config.toml"
+fi
+```
+
+### Genesis Transaction (Gentx)
+
+First, set the staking amount:
+
+> 1000000000000000000agnet === 1 GNET === 10^18 agnet
+> 100000000000000000000agnet is 100 GNET === 10^20 agnet
+
+```bash
+export STAKE_AMOUNT=100000000000000000000agnet
+```
+
+Then ensure that MY_ADDRESS is set to your node's address:
+
+```bash
+export MY_ADDRESS=$(galacticad keys show $MONIKER -a --keyring-dir $GALACTICA_HOME --keyring-backend $KEYRING_BACKEND)
+```
+
+Before creating the gentx, ensure that you add your address to the genesis accounts:
+
+```bash
+galacticad add-genesis-account \
+  $MY_ADDRESS \
+  $STAKE_AMOUNT \
+  --home "$GALACTICA_HOME"
+```
+
+Configure the gentx parameters by running the following commands:
+```bash
+ip=0.0.0.0
+p2p_port=26656
+commission_rate=0.1
+commission_max_rate=0.2
+commission_max_change_rate=0.01
+details="Your details"
+security_contact="Your security contact"
+website="Your website"
+identity="Your identity"
+```
+
+Now, create the gentx:
+
+```bash
+galacticad gentx \
+    $MONIKER \
+    $STAKE_AMOUNT \
+    --amount $STAKE_AMOUNT \
+    --ip $ip \
+    --p2p-port $p2p_port \
+    --commission-max-change-rate $commission_max_change_rate \
+    --commission-max-rate $commission_max_rate \
+    --commission-rate $commission_rate \
+    --details "$details" \
+    --security-contact "$security_contact" \
+    --website "$website" \
+    --identity "$identity" \
+    --keyring-dir $GALACTICA_HOME \
+    --keyring-backend $KEYRING_BACKEND \
+    --chain-id $CHAIN_ID \
+    --home $GALACTICA_HOME
+```
+
+Copy the gentx file to the network configuration directory to submit it as a public pull request to the [Galactica networks repository](https://github.com/Galactica-corp/networks).
+
+```bash
+cp "$(ls -t $GALACTICA_HOME/config/gentx/ | head -n1)" "$NETWORK_PATH/gentx/"
+```
+
+### Submitting the Gentx
+
+After generating your gentx, submit it as public pull request to the [Galactica networks repository](https://github.com/Galactica-corp/networks). Ensure all information is accurate before proceeding.
+
+Follow example of how to submit a gentx to the Galactica networks repository:
+
+- Fork the Galactica networks repository.
+- Clone the forked repository to your local machine.
+
+- Create a new branch and switch to it:
+  ```bash
+  git checkout -b gentx-<your-moniker>
+  ```
+  
+- Add the gentx file to the repository:
+  ```bash
+  git add $NETWORK_PATH/gentx/<gentx-file>
+  ```
+  
+- Commit the changes:
+    ```bash
+    git commit -m "gentx: <your-moniker>"
+    ```
+  
+- Push the changes to the repository:
+    ```bash
+    git push origin gentx-<your-moniker>
+    ```
+  
+- Create a pull request on the Galactica networks repository.
+  - Visit the [Galactica networks repository](https://github.com/Galactica-corp/networks).
+  - Click on the "Pull requests" tab.
+  - Click on the "New pull request" button.
+  - Select the branch you just pushed and click "Create pull request".
+  - Fill in the details and click "Create pull request".
+  
