@@ -189,6 +189,7 @@ fi
 First, set the staking amount:
 
 > 1000000000000000000agnet === 1 GNET === 10^18 agnet
+> 
 > 100000000000000000000agnet is 100 GNET === 10^20 agnet
 
 ```bash
