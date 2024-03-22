@@ -1,0 +1,63 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "High Stakes 🇨🇭",
+          "identity": "2CB281A714F6133B",
+          "website": "https://highstakes.ch",
+          "security_contact": "contact@htakes.ch",
+          "details": "Twitter @HighStakes_CH | Discord https://discord.gg/MtAc6peX"
+        },
+        "commission": {
+          "rate": "0.000000000000000000",
+          "max_rate": "0.000000000000000000",
+          "max_change_rate": "0.000000000000000000"
+        },
+        "min_self_delegation": "1",
+        "delegator_address": "gala1xxz5zr5xpneg327z06wmvwh2tq2s8q72r7728x",
+        "validator_address": "galavaloper1xxz5zr5xpneg327z06wmvwh2tq2s8q72wh9vt0",
+        "pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "fcDZkN/9VmcgbUWik9/trnd4fQHGREX+f5ckqpcgUks="
+        },
+        "value": {
+          "denom": "agnet",
+          "amount": "100000000000000000000"
+        }
+      }
+    ],
+    "memo": "4313c88bb2d7a4afe4a58f87a0f282eee96fbdba@65.109.182.72:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+          "key": "A5FYHbmD5JR0f4oLe55/b/vs6IYQKbVmP1qnEJNkv+8j"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    },
+    "tip": null
+  },
+  "signatures": [
+    "irez4DqSdMe0E2njwC09Tcmyn8lMzvCMGw0kwSVkkUl7lHlxG1UpWrq82LB+lSeGTI2gJUQy9kmd/cnJVlVMEQA="
+  ]
+}
+g
