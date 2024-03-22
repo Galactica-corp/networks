@@ -37,7 +37,7 @@ The `commission-rate`, `commission-max-rate`, `commission-max-change-rate` are r
 
 ```sh
 # Create the gentx
-galacticad gentx your-key-name  10000000000000000000agnet \
+galacticad gentx your-key-name  100000000000000000000agnet \
   --node-id $(galacticad tendermint show-node-id) \
   --chain-id galactica_9301-1 \
   --commission-rate 0.05 \
