@@ -12,7 +12,7 @@ For detailed guidance on setting up and running a Galactica network node, please
 
 ## Install [`galactica`](https://github.com/Galactica-corp/galactica)
 
-To clone the networks repository, run:
+To clone the Galactica Network node repository and install the `galacticad` command-line tool, run the following commands:
 
 ```sh
 git clone https://github.com/Galactica-corp/galactica
