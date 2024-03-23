@@ -2,12 +2,12 @@
 
 GALACTICA_HOME="~/.galactica"
 GALACTICA_HOME=$(eval echo $GALACTICA_HOME)
-NETWORK_PATH=${NETWORK_PATH:-"./network/testnet/galactica_9301-1"}
+NETWORK_PATH=${NETWORK_PATH:-"./galactica_9301-1"}
 KEYRING_BACKEND=${KEYRING_BACKEND:-"file"}
 MONIKER=${MONIKER:-""}
 
 function gala() {
-    /usr/local/bin/galacticad --home "$GALACTICA_HOME" "$@"
+    galacticad --home "$GALACTICA_HOME" "$@"
 }
 
 
