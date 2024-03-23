@@ -14,13 +14,13 @@ This directory contains several scripts that simplify the setup and management o
 
 - Set `GALACTICA_HOME` to your node's home directory, e.g., `export GALACTICA_HOME=~/.galactica`.
 - Set `CHAIN_ID` to your network chain ID, e.g., `export CHAIN_ID=galactica_9301-1`.
-- Set `NETWORK_PATH` to your network configuration directory, e.g., `export NETWORK_PATH=./network/testnet/$CHAIN_ID`.
+- Set `NETWORK_PATH` to your network configuration directory, e.g., `export NETWORK_PATH=./$CHAIN_ID`.
 - Set `KEYRING_BACKEND` to your keyring backend, e.g., `export KEYRING_BACKEND=test`. You can use various keyring backends such as `os`, `file`, `test`, `kwallet`, `pass`, etc. To read more about keyring backends, visit [Evmos documentation](https://docs.evmos.org/protocol/concepts/keyring#keyring-backends)
 
 ```sh
 export GALACTICA_HOME=~/.galactica
 export CHAIN_ID=galactica_9301-1
-export NETWORK_PATH=./network/testnet/$CHAIN_ID
+export NETWORK_PATH=./$CHAIN_ID
 export KEYRING_BACKEND=file
 ```
 
@@ -44,7 +44,7 @@ export KEYRING_BACKEND=file
   ```bash
   ./scripts/create-tx.sh
   ```
-  Follow the prompts to input staking amount, validator node IP, and P2P port, etc. The script will generate a new gentx file in the `./network/testnet/galactica_9301-1/gentx` directory.
+  Follow the prompts to input staking amount, validator node IP, and P2P port, etc. The script will generate a new gentx file in the `./galactica_9301-1/gentx` directory.
 
 
 - **update-home.sh**: Updates the node's home directory with the latest configuration files.

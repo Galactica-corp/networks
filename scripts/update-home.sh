@@ -33,7 +33,6 @@ cp -r "$NETWORK_PATH"/app.toml "$GALACTICA_HOME/config/app.toml"
 cp -r "$NETWORK_PATH"/client.toml "$GALACTICA_HOME/config/client.toml"
 cp -r "$NETWORK_PATH"/config.toml "$GALACTICA_HOME/config/config.toml"
 cp -r "$NETWORK_PATH"/genesis.json "$GALACTICA_HOME/config/genesis.json"
-rm -rf $GALACTICA_HOME/config/gentx/*
 cp -r "$NETWORK_PATH"/gentx/* "$GALACTICA_HOME/config/gentx/"
 
 if [[ "$(uname)" == "Darwin" ]]; then
