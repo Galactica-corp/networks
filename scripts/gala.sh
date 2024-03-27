@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GALACTICA_HOME="~/.galactica"
+GALACTICA_HOME=${GALACTICA_HOME:-"~/.galactica"}
 GALACTICA_HOME=$(eval echo $GALACTICA_HOME)
 NETWORK_PATH=${NETWORK_PATH:-"./galactica_9301-1"}
 KEYRING_BACKEND=${KEYRING_BACKEND:-"file"}
