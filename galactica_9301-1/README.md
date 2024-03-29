@@ -1,7 +1,7 @@
-# 🔗 `galactica_9301-1`
+# 🔗 `galactica_9301-1 (Reticulum)`
 
 ![chain-id](https://img.shields.io/badge/chain%20id-galactica_9301--1-blue?style=for-the-badge)
-![version: v0.1.0](https://img.shields.io/badge/version-v0.1.0-green?style=for-the-badge)
+![version: v0.1.1](https://img.shields.io/badge/version-v0.1.1-green?style=for-the-badge)
 
 
 ## Install [`galactica`](https://github.com/Galactica-corp/galactica)
@@ -11,7 +11,7 @@ To clone the networks repository, run:
 ```sh
 git clone https://github.com/Galactica-corp/galactica
 cd galactica
-git checkout v0.1.0
+git checkout v0.1.1
 make install
 ```
 
@@ -37,7 +37,7 @@ The `commission-rate`, `commission-max-rate`, `commission-max-change-rate` are r
 
 ```sh
 # Create the gentx
-galacticad gentx your-key-name  100000000000000000000agnet \
+galacticad gentx your-key-name 100000000000000000000agnet \
   --node-id $(galacticad tendermint show-node-id) \
   --chain-id galactica_9301-1 \
   --commission-rate 0.05 \

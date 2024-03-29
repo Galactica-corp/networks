@@ -119,6 +119,7 @@ gala add-genesis-account \
 gala gentx \
     $moniker \
     $staking_amount \
+    --node-id $(gala tendermint show-node-id) \
     --amount $staking_amount \
     --ip $ip \
     --p2p-port $p2p_port \
