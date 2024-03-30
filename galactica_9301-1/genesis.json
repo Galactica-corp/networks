@@ -2017,7 +2017,7 @@
     },
     "staking": {
       "params": {
-        "unbonding_time": "604800s",
+        "unbonding_time": "30s",
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
