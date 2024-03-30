@@ -1724,7 +1724,7 @@
         ]
       },
       "voting_params": {
-        "voting_period": "600s"
+        "voting_period": "1209600s"
       },
       "tally_params": null,
       "params": {
@@ -1734,8 +1734,8 @@
             "amount": "100000000000000000000"
           }
         ],
-        "max_deposit_period": "600s",
-        "voting_period": "600s",
+        "max_deposit_period": "1209600s",
+        "voting_period": "1209600s",
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000",
@@ -2017,7 +2017,7 @@
     },
     "staking": {
       "params": {
-        "unbonding_time": "30s",
+        "unbonding_time": "604800s",
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
