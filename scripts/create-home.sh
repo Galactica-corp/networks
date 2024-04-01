@@ -31,7 +31,6 @@ echo "Found moniker from keys: $moniker"
 
 gala init \
     $moniker \
-    --recover \
     --chain-id $CHAIN_ID \
     --default-denom $BASE_DENOM \
     --home $GALACTICA_HOME
