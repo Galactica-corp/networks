@@ -64,5 +64,10 @@ export KEYRING_BACKEND=file
   ```
   Enter a mnemonic phrase when prompted. The script will import the mnemonic phrase into the keyring.
 
+- **update-seeds.sh**: Update seeds in config.toml 
+  ```bash
+  ./scripts/update-seeds.sh
+  ```
+  
 Please refer to the individual scripts for more detailed usage instructions.  The script will display the public addresses in different formats and the private key if prompted.
 
