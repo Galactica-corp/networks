@@ -1,3 +1,0 @@
-2b590732225bca0f3f55db543861063c705bcd40@seed01-reticulum.galactica.com:26656
-fe758700e25b59b6ba6e2784badcb6024ba1b760@seed02-reticulum.galactica.com:26656
-028d8c875660f0e3fb1d893acd0b2220c619625f@seed03-reticulum.galactica.com:26656
