@@ -1,7 +1,7 @@
 # 🔗 `galactica_9301-1 (Reticulum)`
 
 ![chain-id](https://img.shields.io/badge/chain%20id-galactica_9301--1-blue?style=for-the-badge)
-![version: v0.1.1](https://img.shields.io/badge/version-v0.1.1-green?style=for-the-badge)
+![version: v0.1.2](https://img.shields.io/badge/version-v0.1.2-green?style=for-the-badge)
 
 
 ## Install [`galactica`](https://github.com/Galactica-corp/galactica)
@@ -11,7 +11,7 @@ To clone the networks repository, run:
 ```sh
 git clone https://github.com/Galactica-corp/galactica
 cd galactica
-git checkout v0.1.1
+git checkout v0.1.2
 make install
 ```
 
