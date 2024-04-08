@@ -30,10 +30,17 @@ First, you need to run a galactica node and create a key.
 galacticad init your-moniker --chain-id galactica_9302-1
 ```
 
+Configure tendermint rpc to send transactions and query the blockchain:
+
+```sh
+galacticad config node tcp://seed01-reticulum.galactica.com:26657
+```
+
+You could use your own node or any other public node.
+
 Then create a private key:
 
 ```sh
-# Create keys, be careful with the mnemonic 👀
 galacticad keys add your-key-name
 ```
 
