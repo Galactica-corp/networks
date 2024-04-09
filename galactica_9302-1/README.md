@@ -80,7 +80,7 @@ galacticad tx staking create-validator \
   --commission-max-rate="0.1" \
   --commission-max-change-rate="0.02" \
   --min-self-delegation="1" \
-  --gas="200000" \
+  --gas="300000" \
   --gas-prices="10agnet" \
   --from=your-key-name
 ```
@@ -92,7 +92,7 @@ You could also delegate tokens to your validator:
 galacticad tx staking delegate \
     $(galacticad keys show your-key-name --bech val -a) \
     5000000000000000000agnet \
-    --gas="200000" \
+    --gas="300000" \
     --gas-prices="10agnet" \
     --from=your-key-name
 ```
