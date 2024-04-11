@@ -33,7 +33,7 @@ galacticad init your-moniker --chain-id galactica_9302-1
 Configure tendermint rpc to send transactions and query the blockchain:
 
 ```sh
-galacticad config node tcp://seed01-reticulum.galactica.com:26657
+galacticad config node https://rpc-reticulum.galactica.com:443
 ```
 
 You could use your own node or any other public node.
